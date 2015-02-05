@@ -40,7 +40,7 @@ for year in allYears:
 	print yearString
 	if int(yearString) <= 2007: 
 		pass
-	elif int(yearString)>=2011:
+	elif int(yearString)>=2007:
 		if not os.path.exists(yearString):
 			os.makedirs(yearString)
 		os.chdir(yearString)
