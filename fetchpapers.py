@@ -54,7 +54,7 @@ for year in allYears:
 		
 
 		for department in allDepartments:
-			departmentPattern = re.compile(r"/peqp/"+yearString+"/"+r"([a-zA-Z 0-9&]*)/")
+			departmentPattern = re.compile(r"/peqp/"+yearString+"/"+r"([a-zA-Z0-9& _/,\(\)]*)/")
 			departmentString = departmentPattern.search(urllib2.unquote(department)).groups()[0]
 			#print department
 			departmentData = urllib2.urlopen(department)
@@ -68,7 +68,7 @@ for year in allYears:
 
 			#print allCourses
 			for course in allCourses:
-				coursePattern = re.compile(r"/peqp/"+yearString+"/"+departmentString+"/"+r"([a-zA-Z 0-9&]*)")
+				coursePattern = re.compile(r"/peqp/"+yearString+"/"+departmentString+"/"+r"([a-zA-Z0-9& _/,\(\)]*)")
 				courseString = coursePattern.search(urllib2.unquote(course)).groups()[0]
 				#print courseString
 				pdf = urllib2.urlopen(course).read()

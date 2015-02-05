@@ -53,7 +53,7 @@ for year in allYears:
 
 		#print allPhases
 		for phase in allPhases:
-			phasePattern = re.compile(r"/peqp/"+yearString+"/"+r"([a-zA-Z0-9& _/,()]*)/")
+			phasePattern = re.compile(r"/peqp/"+yearString+"/"+r"([a-zA-Z0-9& _/,\(\)]*)/")
 			phaseString = phasePattern.search(urllib2.unquote(phase)).groups()[0]
 			#print phaseString
 			if not os.path.exists(phaseString):
@@ -67,7 +67,7 @@ for year in allYears:
 			allDepartments = ["http://10.17.32.9"+url for url in allDepartments]
 
 			for department in allDepartments:
-				departmentPattern = re.compile(r"/peqp/"+yearString+"/"+phaseString+"/"+r"([a-zA-Z0-9& _,()]*)")
+				departmentPattern = re.compile(r"/peqp/"+yearString+"/"+phaseString+"/"+r"([a-zA-Z0-9& _,\(\)]*)")
 				departmentString = departmentPattern.search(urllib2.unquote(department)).groups()[0]
 				print department
 				departmentData = urllib2.urlopen(department)
