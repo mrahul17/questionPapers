@@ -1,9 +1,9 @@
-It's that time of year again when the institute server will crash on account of more than 10,000 students downloading previous year question papers.
+This repository is a set of python scripts that downloads ***ALL*** question  papers from the institute's server. It makes neat directories and subdirectories, naming them with the correct year and name of semester, making it easy to find any paper.
 
-***Not any more***. 
-This repo has 2 scripts:
+
+The 2 scripts are:
 1)fetchpapers.py
-2)fetchpapers.py
+2)fetchpapers2.py
 
 The first script will download all question papers of all departments for years upto 2007.
 
